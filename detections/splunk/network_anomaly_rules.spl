@@ -1,0 +1,5 @@
+index=sysmon EventCode=3
+| eval proc=Image, dest=DestinationIp
+| where dest!="10.*" AND dest!="192.168.*"
+| stats count BY proc, dest, DestinationPort
+| sort - count
