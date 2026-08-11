@@ -1,0 +1,3 @@
+index=sysmon EventCode=13
+| search TargetObject="*\\Run" OR TargetObject="*\\RunOnce"
+| stats count BY Image, TargetObject, Details
