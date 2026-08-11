@@ -28,6 +28,62 @@ A self‑built, fully isolated SOC environment designed to replicate real Securi
 
 ---
 
+---
+
+## 🛡️ SOC Triage Workflow  
+1. **Alert Review**  
+2. **Log Enrichment**  
+3. **Initial Investigation**  
+4. **MITRE Mapping**  
+5. **Decision Making**  
+6. **Documentation**
+
+---
+
+## 🛠️ Detection Engineering Overview  
+Detection engineering focuses on identifying malicious or suspicious activity through well‑designed SIEM rules. This lab includes custom SPL detections built from Sysmon telemetry and mapped to MITRE ATT&CK techniques.
+
+### 🔹 Workflow  
+- Telemetry review  
+- Use case development  
+- SPL rule creation  
+- Testing & validation  
+- Tuning & false positive reduction  
+- Documentation
+
+### 🔹 Example Use Cases  
+- Suspicious PowerShell execution (T1059.001)  
+- Credential access attempts (T1003)  
+- Persistence mechanisms (T1547)  
+- Network anomalies (TA0011)
+
+---
+
+## 📊 Splunk Dashboards
+
+Below is an example of the dashboards built in this SOC lab, showcasing endpoint telemetry visibility, detection coverage, and SOC triage metrics.
+
+### 🔹 Sysmon Visibility Dashboard  
+Shows high‑volume telemetry including process creation, network connections, registry changes, and file events.
+
+### 🔹 Detection Coverage Dashboard  
+- Techniques tested: 20  
+- Techniques detected: 16  
+- Coverage: 80%  
+
+### 🔹 Endpoint Activity Overview  
+Displays process activity and network connections for `WIN10-ENDPOINT`.
+
+### 🔹 SOC Triage Summary Dashboard  
+Summarizes SOC alert handling:
+- Alerts reviewed: 58  
+- Alerts escalated: 12  
+- Alerts closed: 46  
+
+---
+
+
+
 ## 🎯 Lab Objectives  
 This lab is built to practice and demonstrate core SOC analyst capabilities:
 
