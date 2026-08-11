@@ -1,0 +1,5 @@
+index=sysmon EventCode=1
+| eval parent=ParentImage, child=Image
+| search child="*powershell.exe" OR child="*cmd.exe"
+| stats count BY parent, child, CommandLine
+| where match(CommandLine, "(?i)encodedcommand|invoke-webrequest|iwr|wget|curl")
