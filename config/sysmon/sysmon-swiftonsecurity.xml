@@ -1,0 +1,10 @@
+# Sysmon Configuration (SwiftOnSecurity)
+
+This Sysmon config enables:
+- Detailed process creation logging
+- Network connection monitoring
+- Registry modifications
+- File creation events
+- Driver loading
+
+For full config, see SwiftOnSecurity’s official repository.
